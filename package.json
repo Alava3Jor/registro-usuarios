@@ -1,14 +1,15 @@
 {
   "name": "registro-usuarios",
   "version": "1.0.0",
+  "description": "Backend para registro de usuarios con Node.js, Express y MySQL",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["registro", "usuarios", "nodejs", "express", "mysql"],
+  "author": "Tu Nombre",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
