@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// Conexión con Railway con tus datos reales
+// Configuración de conexión a la base de datos
 const db = mysql.createConnection({
   host: 'tramway.proxy.rlwy.net',
   user: 'root',
@@ -24,6 +24,7 @@ db.connect(err => {
   console.log('Base de datos conectada');
 });
 
+// Aquí defines la ruta POST /registro
 app.post('/registro', (req, res) => {
   const { nombre, correo } = req.body;
   const query = 'INSERT INTO usuarios (nombre, correo) VALUES (?, ?)';
@@ -33,6 +34,7 @@ app.post('/registro', (req, res) => {
   });
 });
 
+// Finalmente, arranca el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
